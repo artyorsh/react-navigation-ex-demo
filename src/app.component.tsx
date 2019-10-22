@@ -1,0 +1,39 @@
+import React from 'react';
+import { YellowBox } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import {
+  light,
+  mapping,
+} from '@eva-design/eva';
+import {
+  ApplicationProvider,
+  IconRegistry,
+} from 'react-native-ui-kitten';
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
+import { AppNavigator } from '@app-navigation/app.navigator';
+import { AppRoute } from '@app-navigation/app-routes';
+
+export default (): React.ReactFragment => {
+
+  // This value is used to determine the initial screen
+  const isAuthorized: boolean = false;
+
+  return (
+    <React.Fragment>
+      <IconRegistry icons={EvaIconsPack}/>
+      <ApplicationProvider
+        mapping={mapping}
+        theme={light}>
+        <SafeAreaProvider>
+          <AppNavigator initialRouteName={isAuthorized ? AppRoute.HOME : AppRoute.AUTH}/>
+        </SafeAreaProvider>
+      </ApplicationProvider>
+    </React.Fragment>
+  );
+};
+
+// For some reason, starting from 0.61, react-native-gesture-handler throws this warning
+// https://github.com/facebook/react-native/issues/26226
+YellowBox.ignoreWarnings([
+  'RCTRootView cancelTouches',
+]);

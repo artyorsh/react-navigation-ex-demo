@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "lib": ["es6"],
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitAny": false,
+    "target": "esnext",
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "paths": {
+      "@app-navigation/*": ["./src/navigation/*"],
+      "@app-scenes/*": ["./src/scenes/*"],
+      "@app-components/*": ["./src/components/*"],
+      "@app-assets/*": ["./src/assets/*"],
+      "@app-data/*": ["./src/data/*"]
+    }
+  },
+  "exclude": [
+    "./node_modules",
+    "./babel.config.js",
+    "./metro.config.js"
+  ]
+}
