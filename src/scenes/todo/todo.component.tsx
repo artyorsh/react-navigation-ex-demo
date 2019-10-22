@@ -22,6 +22,7 @@ import {
 } from '@app-assets/icons';
 import { AppRoute } from '@app-navigation/app-routes';
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `todo.navigator.tsx`)
 export const TodoScreen = (props): SafeAreaLayoutElement => {
 
   const [selectedIndex, setSelectedIndex] = React.useState<number>(props.state.index);

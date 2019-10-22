@@ -12,6 +12,7 @@ import {
 } from '@app-components/safe-area-layout.component';
 import { Toolbar } from '@app-components/toolbar.component';
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `home.navigator.tsx`)
 export const AboutScreen = (props): SafeAreaLayoutElement => (
   <SafeAreaLayout
     style={styles.safeArea}

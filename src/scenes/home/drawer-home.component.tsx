@@ -29,6 +29,7 @@ const DrawerHeader = (): React.ReactElement<ImageBackgroundProps> => (
   />
 );
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `home.navigator.tsx`)
 export const DrawerHomeScreen = (props): DrawerElement => {
 
   const onMenuItemSelect = (index: number): void => {

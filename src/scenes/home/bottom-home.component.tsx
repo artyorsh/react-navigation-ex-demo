@@ -14,6 +14,7 @@ import {
   PersonIcon,
 } from '@app-assets/icons';
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `home.navigator.tsx`)
 export const BottomHomeScreen = (props): SafeAreaLayoutElement => {
 
   const [selectedIndex, setSelectedIndex] = React.useState<number>(props.state.index);
