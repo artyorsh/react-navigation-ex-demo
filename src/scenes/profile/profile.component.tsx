@@ -13,6 +13,7 @@ import {
 import { Toolbar } from '@app-components/toolbar.component';
 import { MenuIcon } from '@app-assets/icons';
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `profile.navigator.tsx`)
 export const ProfileScreen = (props): SafeAreaLayoutElement => (
   <SafeAreaLayout
     style={styles.safeArea}

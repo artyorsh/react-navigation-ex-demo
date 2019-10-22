@@ -7,7 +7,7 @@ import { AppRoute } from './app-routes';
 
 const Stack = createStackNavigator();
 
-// @REACT-NAVIGATION-5: Stack.Navigator `config` prop type definition?
+// FIXME(REACT-NAVIGATION-5): Stack.Navigator `config` prop type definition?
 
 export const AppNavigator = (config): React.ReactElement => (
   <NavigationNativeContainer>

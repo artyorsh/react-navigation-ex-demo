@@ -7,6 +7,7 @@ import {
   Text,
 } from 'react-native-ui-kitten';
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `todo.navigator.tsx`)
 export const TodoDoneScreen = (props): LayoutElement => (
   <Layout style={styles.container}>
     <Text category='h4'>

@@ -4,8 +4,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   BottomHomeScreen,
   DrawerHomeScreen,
+  AboutScreen,
 } from '@app-scenes/home';
-import { AboutScreen } from '@app-scenes/about';
 import { TodoNavigator } from './todo.navigator';
 import { ProfileNavigator } from './profile.navigator';
 import { AppRoute } from './app-routes';
@@ -13,7 +13,7 @@ import { AppRoute } from './app-routes';
 const Drawer = createDrawerNavigator();
 const BottomTab = createBottomTabNavigator();
 
-// @REACT-NAVIGATION-5: Not able to disable a pan gesture.
+// FIXME(REACT-NAVIGATION-5): Not able to disable a pan gesture.
 //
 // In v4, it was possible with `navigationOptions: { gesturesEnabled: false }`
 // Basically, I want to do this to disable `back` navigation from home screen to auth

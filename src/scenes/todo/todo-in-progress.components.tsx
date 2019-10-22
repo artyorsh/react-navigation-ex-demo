@@ -27,6 +27,7 @@ const allTodos: Todo[] = [
   Todo.mocked2(),
 ];
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `todo.navigator.tsx`)
 const TodoInProgressScreenComponent = (props): ListElement => {
 
   const [todos, setTodos] = React.useState<Todo[]>(allTodos);

@@ -17,6 +17,7 @@ import { Toolbar } from '@app-components/toolbar.component';
 import { ImageOverlay } from '@app-components/image-overlay.component';
 import { ProgressBar } from '@app-components/progress-bar.component';
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `todo.navigator.tsx`)
 export const TodoDetailsScreen = (props): LayoutElement => {
 
   const { todo } = props.route.params;

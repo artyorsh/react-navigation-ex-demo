@@ -19,6 +19,7 @@ import {
 } from '@app-data/sign-up.model';
 import { AppRoute } from '@app-navigation/app-routes';
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `auth.navigator.tsx`)
 export const SignUpScreen = (props): LayoutElement => {
 
   const onFormSubmit = (values: SignUpData): void => {

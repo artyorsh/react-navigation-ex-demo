@@ -12,7 +12,7 @@ import { AppRoute } from './app-routes';
 const Stack = createStackNavigator();
 const TopTab = createMaterialTopTabNavigator();
 
-// @REACT-NAVIGATION-5: Describe injected props type definitions.
+// FIXME(REACT-NAVIGATION-5): Describe injected props type definitions.
 //
 // In this architecture, TodoScreen is a component of Top Tabs Navigator
 // The same time, Top Tabs Navigator is a component for one of the Bottom Tab Navigator tabs
@@ -29,7 +29,7 @@ const TopTab = createMaterialTopTabNavigator();
 // but sometimes you have a calls like `toggleDrawer` and your autocomplete not works
 // because of missing type definitions for navigation props :)
 
-// @REACT-NAVIGATION-5: Swipes in TopTab.Navigator
+// FIXME(REACT-NAVIGATION-5): Swipes in TopTab.Navigator
 //
 // Is it possible to track swipe progress?
 // In this case, it's needed to synchronize tab-bar indicator in TodoScreen

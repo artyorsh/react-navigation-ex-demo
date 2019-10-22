@@ -19,6 +19,7 @@ import {
 } from '@app-data/reset-password.model';
 import { AppRoute } from '@app-navigation/app-routes';
 
+// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `auth.navigator.tsx`)
 export const ResetPasswordScreen = (props): LayoutElement => {
 
   const onFormSubmit = (values: ResetPasswordData): void => {
