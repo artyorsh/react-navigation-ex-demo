@@ -25,7 +25,7 @@ const drawerData: MenuItemType[] = [
 const DrawerHeader = (): React.ReactElement<ImageBackgroundProps> => (
   <ImageBackground
     style={styles.header}
-    source={require('../../assets/image-note-background-1.jpg')}
+    source={require('../../assets/image-background.jpeg')}
   />
 );
 

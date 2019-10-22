@@ -1,9 +1,9 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import {
-  ResetPasswordScreen,
   SignInScreen,
   SignUpScreen,
+  ResetPasswordScreen,
 } from '@app-scenes/auth';
 import { AppRoute } from './app-routes';
 
