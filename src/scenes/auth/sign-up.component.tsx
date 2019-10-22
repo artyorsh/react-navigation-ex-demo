@@ -4,6 +4,10 @@ import {
   StyleSheet,
 } from 'react-native';
 import {
+  EdgeInsets,
+  useSafeArea,
+} from 'react-native-safe-area-context';
+import {
   Formik,
   FormikProps,
 } from 'formik';
@@ -18,9 +22,12 @@ import {
   SignUpSchema,
 } from '@app-data/sign-up.model';
 import { AppRoute } from '@app-navigation/app-routes';
+import { Toolbar } from '@app-components/toolbar.component';
 
 // FIXME(REACT-NAVIGATION-5): props type definitions? (used in `auth.navigator.tsx`)
 export const SignUpScreen = (props): LayoutElement => {
+
+  const insets: EdgeInsets = useSafeArea();
 
   const onFormSubmit = (values: SignUpData): void => {
     navigateHome();
@@ -63,9 +70,13 @@ export const SignUpScreen = (props): LayoutElement => {
   return (
     <React.Fragment>
       <ImageBackground
-        style={styles.appBar}
-        source={require('../../assets/image-note-background-1.jpg')}
-      />
+        style={[styles.appBar, { paddingTop: insets.top }]}
+        source={require('../../assets/image-note-background-1.jpg')}>
+        <Toolbar
+          appearance='control'
+          onBackPress={props.navigation.goBack}
+        />
+      </ImageBackground>
       <Layout style={styles.formContainer}>
         <Formik
           initialValues={SignUpData.empty()}
