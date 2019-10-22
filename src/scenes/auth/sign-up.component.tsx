@@ -71,7 +71,7 @@ export const SignUpScreen = (props): LayoutElement => {
     <React.Fragment>
       <ImageBackground
         style={[styles.appBar, { paddingTop: insets.top }]}
-        source={require('../../assets/image-note-background-1.jpg')}>
+        source={require('../../assets/image-background.jpeg')}>
         <Toolbar
           appearance='control'
           onBackPress={props.navigation.goBack}

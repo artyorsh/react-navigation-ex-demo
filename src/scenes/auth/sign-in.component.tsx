@@ -93,7 +93,7 @@ export const SignInScreen = (props): LayoutElement => {
     <React.Fragment>
       <ImageBackground
         style={styles.appBar}
-        source={require('../../assets/image-note-background-1.jpg')}
+        source={require('../../assets/image-background.jpeg')}
       />
       <Layout style={styles.formContainer}>
         <Formik
