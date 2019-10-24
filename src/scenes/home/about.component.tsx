@@ -5,15 +5,15 @@ import {
   Layout,
   Text,
 } from 'react-native-ui-kitten';
+import { AboutScreenProps } from '@app-navigation/home.navigator';
+import { Toolbar } from '@app-components/toolbar.component';
 import {
   SafeAreaLayout,
   SafeAreaLayoutElement,
   SaveAreaInset,
 } from '@app-components/safe-area-layout.component';
-import { Toolbar } from '@app-components/toolbar.component';
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `home.navigator.tsx`)
-export const AboutScreen = (props): SafeAreaLayoutElement => (
+export const AboutScreen = (props: AboutScreenProps): SafeAreaLayoutElement => (
   <SafeAreaLayout
     style={styles.safeArea}
     insets={SaveAreaInset.TOP}>

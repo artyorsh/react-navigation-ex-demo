@@ -1,5 +1,12 @@
 import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
+import {
+  ParamListBase,
+  RouteProp,
+} from '@react-navigation/core';
+import {
+  createStackNavigator,
+  StackNavigationProp,
+} from '@react-navigation/stack';
 import {
   SignInScreen,
   SignUpScreen,
@@ -7,7 +14,28 @@ import {
 } from '@app-scenes/auth';
 import { AppRoute } from './app-routes';
 
-const Stack = createStackNavigator();
+interface AuthNavigatorParams extends ParamListBase {
+  [AppRoute.SIGN_IN]: undefined;
+  [AppRoute.SIGN_UP]: undefined;
+  [AppRoute.RESET_PASSWORD]: undefined;
+}
+
+export interface SignInScreenProps {
+  navigation: StackNavigationProp<AuthNavigatorParams, AppRoute.SIGN_IN>;
+  route: RouteProp<AuthNavigatorParams, AppRoute.SIGN_IN>;
+}
+
+export interface SignUpScreenProps {
+  navigation: StackNavigationProp<AuthNavigatorParams, AppRoute.SIGN_UP>;
+  route: RouteProp<AuthNavigatorParams, AppRoute.SIGN_UP>;
+}
+
+export interface ResetPasswordScreenProps {
+  navigation: StackNavigationProp<AuthNavigatorParams, AppRoute.RESET_PASSWORD>;
+  route: RouteProp<AuthNavigatorParams, AppRoute.RESET_PASSWORD>;
+}
+
+const Stack = createStackNavigator<AuthNavigatorParams>();
 
 export const AuthNavigator = (): React.ReactElement => (
   <Stack.Navigator headerMode='none'>
