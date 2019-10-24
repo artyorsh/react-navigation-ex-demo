@@ -8,12 +8,14 @@ import {
   ListItem,
   ListItemElement,
   Text,
+  ThemedComponentProps,
   withStyles,
 } from 'react-native-ui-kitten';
-import { Todo } from '@app-data/todo.model';
+import { TodoInProgressScreenProps } from '@app-navigation/todo.navigator';
 import { AppRoute } from '@app-navigation/app-routes';
-import { SearchIcon } from '@app-assets/icons';
 import { ProgressBar } from '@app-components/progress-bar.component';
+import { SearchIcon } from '@app-assets/icons';
+import { Todo } from '@app-data/todo.model';
 
 const allTodos: Todo[] = [
   Todo.mocked0(),
@@ -27,8 +29,7 @@ const allTodos: Todo[] = [
   Todo.mocked2(),
 ];
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `todo.navigator.tsx`)
-const TodoInProgressScreenComponent = (props): ListElement => {
+const TodoInProgressScreenComponent = (props: TodoInProgressScreenProps & ThemedComponentProps): ListElement => {
 
   const [todos, setTodos] = React.useState<Todo[]>(allTodos);
   const [query, setQuery] = React.useState<string>('');

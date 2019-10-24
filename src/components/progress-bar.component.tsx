@@ -4,12 +4,12 @@ import {
   ViewProps,
 } from 'react-native';
 import {
-  StyledComponentProps,
   Text,
+  ThemedComponentProps,
   withStyles,
 } from 'react-native-ui-kitten';
 
-export interface ProgressBarProps extends ViewProps, StyledComponentProps {
+export interface ProgressBarProps extends ViewProps, ThemedComponentProps {
   progress: number;
   text?: string;
 }

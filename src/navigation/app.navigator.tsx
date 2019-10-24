@@ -1,15 +1,21 @@
 import React from 'react';
+import { ParamListBase } from '@react-navigation/core';
 import { NavigationNativeContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AuthNavigator } from './auth.navigator';
 import { HomeNavigator } from './home.navigator';
 import { AppRoute } from './app-routes';
 
-const Stack = createStackNavigator();
+type StackNavigatorProps = React.ComponentProps<typeof Stack.Navigator>;
 
-// FIXME(REACT-NAVIGATION-5): Stack.Navigator `config` prop type definition?
+interface AppNavigatorParams extends ParamListBase {
+  [AppRoute.AUTH]: undefined;
+  [AppRoute.HOME]: undefined;
+}
 
-export const AppNavigator = (config): React.ReactElement => (
+const Stack = createStackNavigator<AppNavigatorParams>();
+
+export const AppNavigator = (config: Partial<StackNavigatorProps>): React.ReactElement => (
   <NavigationNativeContainer>
     <Stack.Navigator {...config} headerMode='none'>
       <Stack.Screen name={AppRoute.AUTH} component={AuthNavigator}/>

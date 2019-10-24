@@ -14,6 +14,7 @@ import {
   Formik,
   FormikProps,
 } from 'formik';
+import { SignInScreenProps } from '@app-navigation/auth.navigator';
 import { AppRoute } from '@app-navigation/app-routes';
 import { FormInput } from '@app-components/form-input.component';
 import {
@@ -25,8 +26,7 @@ import {
   SignInSchema,
 } from '@app-data/sign-in.model';
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `auth.navigator.tsx`)
-export const SignInScreen = (props): LayoutElement => {
+export const SignInScreen = (props: SignInScreenProps): LayoutElement => {
 
   const [shouldRemember, setShouldRemember] = React.useState<boolean>(false);
   const [passwordVisible, setPasswordVisible] = React.useState<boolean>(false);

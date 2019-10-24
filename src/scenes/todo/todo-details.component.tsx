@@ -13,12 +13,17 @@ import {
   EdgeInsets,
   useSafeArea,
 } from 'react-native-safe-area-context';
+import { TodoDetailsScreenProps } from '@app-navigation/todo.navigator';
 import { Toolbar } from '@app-components/toolbar.component';
 import { ImageOverlay } from '@app-components/image-overlay.component';
 import { ProgressBar } from '@app-components/progress-bar.component';
+import { Todo } from '@app-data/todo.model';
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `todo.navigator.tsx`)
-export const TodoDetailsScreen = (props): LayoutElement => {
+export interface TodoDetailsRouteParams {
+  todo: Todo;
+}
+
+export const TodoDetailsScreen = (props: TodoDetailsScreenProps): LayoutElement => {
 
   const { todo } = props.route.params;
   const insets: EdgeInsets = useSafeArea();

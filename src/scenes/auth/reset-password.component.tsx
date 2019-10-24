@@ -16,16 +16,16 @@ import {
   Formik,
   FormikProps,
 } from 'formik';
+import { ResetPasswordScreenProps } from '@app-navigation/auth.navigator';
+import { AppRoute } from '@app-navigation/app-routes';
 import { FormInput } from '@app-components/form-input.component';
+import { Toolbar } from '@app-components/toolbar.component';
 import {
   ResetPasswordData,
   ResetPasswordSchema,
 } from '@app-data/reset-password.model';
-import { AppRoute } from '@app-navigation/app-routes';
-import { Toolbar } from "@app-components/toolbar.component";
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `auth.navigator.tsx`)
-export const ResetPasswordScreen = (props): LayoutElement => {
+export const ResetPasswordScreen = (props: ResetPasswordScreenProps): LayoutElement => {
 
   const insets: EdgeInsets = useSafeArea();
 

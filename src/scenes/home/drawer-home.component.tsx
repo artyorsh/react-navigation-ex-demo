@@ -9,12 +9,13 @@ import {
   DrawerElement,
   MenuItemType,
 } from 'react-native-ui-kitten';
+import { DrawerHomeScreenProps } from '@app-navigation/home.navigator';
+import { AppRoute } from '@app-navigation/app-routes';
 import {
   HomeIcon,
   InfoIcon,
   LogoutIcon,
 } from '@app-assets/icons';
-import { AppRoute } from '@app-navigation/app-routes';
 
 const drawerData: MenuItemType[] = [
   { icon: HomeIcon, title: 'Home' },
@@ -29,8 +30,7 @@ const DrawerHeader = (): React.ReactElement<ImageBackgroundProps> => (
   />
 );
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `home.navigator.tsx`)
-export const DrawerHomeScreen = (props): DrawerElement => {
+export const DrawerHomeScreen = (props: DrawerHomeScreenProps): DrawerElement => {
 
   const onMenuItemSelect = (index: number): void => {
     const { [index]: selectedItem } = drawerData;

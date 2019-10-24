@@ -4,6 +4,8 @@ import {
   Tab,
   TabBar,
 } from 'react-native-ui-kitten';
+import { TodoScreenProps } from '@app-navigation/todo.navigator';
+import { AppRoute } from '@app-navigation/app-routes';
 import {
   SafeAreaLayout,
   SafeAreaLayoutElement,
@@ -20,10 +22,8 @@ import {
   LogoutIcon,
   MenuIcon,
 } from '@app-assets/icons';
-import { AppRoute } from '@app-navigation/app-routes';
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `todo.navigator.tsx`)
-export const TodoScreen = (props): SafeAreaLayoutElement => {
+export const TodoScreen = (props: TodoScreenProps): SafeAreaLayoutElement => {
 
   const [selectedIndex, setSelectedIndex] = React.useState<number>(props.state.index);
 

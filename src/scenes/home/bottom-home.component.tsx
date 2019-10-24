@@ -4,6 +4,7 @@ import {
   BottomNavigationTab,
   Divider,
 } from 'react-native-ui-kitten';
+import { BottomHomeScreenProps } from '@app-navigation/home.navigator';
 import {
   SafeAreaLayout,
   SafeAreaLayoutElement,
@@ -14,15 +15,14 @@ import {
   PersonIcon,
 } from '@app-assets/icons';
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `home.navigator.tsx`)
-export const BottomHomeScreen = (props): SafeAreaLayoutElement => {
+export const BottomHomeScreen = (props: BottomHomeScreenProps): SafeAreaLayoutElement => {
 
   const [selectedIndex, setSelectedIndex] = React.useState<number>(props.state.index);
 
   const onSelect = (index: number): void => {
-    const { [index]: selectedRoute } = props.state.routeNames;
+    const { [index]: selectedTabRoute } = props.state.routeNames;
 
-    props.navigation.navigate(selectedRoute);
+    props.navigation.navigate(selectedTabRoute);
     setSelectedIndex(index);
   };
 

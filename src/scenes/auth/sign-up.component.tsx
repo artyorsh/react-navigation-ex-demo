@@ -16,16 +16,16 @@ import {
   Layout,
   LayoutElement,
 } from 'react-native-ui-kitten';
+import { SignUpScreenProps } from '@app-navigation/auth.navigator';
+import { AppRoute } from '@app-navigation/app-routes';
+import { Toolbar } from '@app-components/toolbar.component';
 import { FormInput } from '@app-components/form-input.component';
 import {
   SignUpData,
   SignUpSchema,
 } from '@app-data/sign-up.model';
-import { AppRoute } from '@app-navigation/app-routes';
-import { Toolbar } from '@app-components/toolbar.component';
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `auth.navigator.tsx`)
-export const SignUpScreen = (props): LayoutElement => {
+export const SignUpScreen = (props: SignUpScreenProps): LayoutElement => {
 
   const insets: EdgeInsets = useSafeArea();
 

@@ -6,9 +6,9 @@ import {
   LayoutElement,
   Text,
 } from 'react-native-ui-kitten';
+import { TodoDoneScreenProps } from '@app-navigation/todo.navigator';
 
-// FIXME(REACT-NAVIGATION-5): props type definitions? (used in `todo.navigator.tsx`)
-export const TodoDoneScreen = (props): LayoutElement => (
+export const TodoDoneScreen = (props: TodoDoneScreenProps): LayoutElement => (
   <Layout style={styles.container}>
     <Text category='h4'>
       No done todos yet.
