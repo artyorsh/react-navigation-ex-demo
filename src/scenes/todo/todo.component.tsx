@@ -25,8 +25,6 @@ import {
 
 export const TodoScreen = (props: TodoScreenProps): SafeAreaLayoutElement => {
 
-  const [selectedIndex, setSelectedIndex] = React.useState<number>(props.state.index);
-
   const menu: ToolbarMenu = [
     { title: 'About', icon: InfoIcon },
     { title: 'Log Out', icon: LogoutIcon },
@@ -47,9 +45,7 @@ export const TodoScreen = (props: TodoScreenProps): SafeAreaLayoutElement => {
 
   const onTabSelect = (index: number): void => {
     const { [index]: selectedTabRoute } = props.state.routeNames;
-
     props.navigation.navigate(selectedTabRoute);
-    setSelectedIndex(index);
   };
 
   return (
@@ -62,7 +58,7 @@ export const TodoScreen = (props: TodoScreenProps): SafeAreaLayoutElement => {
         onBackPress={props.navigation.toggleDrawer}
       />
       <TabBar
-        selectedIndex={selectedIndex}
+        selectedIndex={props.state.index}
         onSelect={onTabSelect}>
         <Tab
           icon={GridIcon}
