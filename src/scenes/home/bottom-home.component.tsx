@@ -17,13 +17,9 @@ import {
 
 export const BottomHomeScreen = (props: BottomHomeScreenProps): SafeAreaLayoutElement => {
 
-  const [selectedIndex, setSelectedIndex] = React.useState<number>(props.state.index);
-
   const onSelect = (index: number): void => {
     const { [index]: selectedTabRoute } = props.state.routeNames;
-
     props.navigation.navigate(selectedTabRoute);
-    setSelectedIndex(index);
   };
 
   return (
@@ -31,7 +27,7 @@ export const BottomHomeScreen = (props: BottomHomeScreenProps): SafeAreaLayoutEl
       <Divider/>
       <BottomNavigation
         appearance='noIndicator'
-        selectedIndex={selectedIndex}
+        selectedIndex={props.state.index}
         onSelect={onSelect}>
         <BottomNavigationTab
           icon={LayoutIcon}
