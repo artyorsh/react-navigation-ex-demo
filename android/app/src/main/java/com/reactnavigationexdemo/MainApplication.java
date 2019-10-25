@@ -1,4 +1,4 @@
-package com.uikittenreactnavigation5app;
+package com.reactnavigationexdemo;
 
 import android.app.Application;
 import android.content.Context;

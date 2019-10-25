@@ -12,13 +12,13 @@
 #import <React/RCTRootView.h>
 
 #define TIMEOUT_SECONDS 600
-#define TEXT_TO_LOOK_FOR @"Welcome to React Native!"
+#define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface UIKittenReactNavigation5AppTests : XCTestCase
+@interface ReactNavigationExDemoTests : XCTestCase
 
 @end
 
-@implementation UIKittenReactNavigation5AppTests
+@implementation ReactNavigationExDemoTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {
@@ -59,7 +59,7 @@
       return NO;
     }];
   }
-
+  
 #ifdef DEBUG
   RCTSetLogFunction(RCTDefaultLogFunction);
 #endif
