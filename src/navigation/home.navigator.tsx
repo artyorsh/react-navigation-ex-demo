@@ -71,7 +71,7 @@ const BottomTab = createBottomTabNavigator<HomeBottomTabsNavigatorParams>();
 
 const HomeBottomNavigator = (): React.ReactElement => (
   // @ts-ignore: `tabBarComponent` also contains a DrawerNavigationProp
-  <BottomTab.Navigator tabBarComponent={BottomHomeScreen}>
+  <BottomTab.Navigator tabBar={BottomHomeScreen}>
     <BottomTab.Screen name={AppRoute.TODO} component={TodoNavigator}/>
     <BottomTab.Screen name={AppRoute.PROFILE} component={ProfileNavigator}/>
   </BottomTab.Navigator>
@@ -79,7 +79,7 @@ const HomeBottomNavigator = (): React.ReactElement => (
 
 export const HomeNavigator = (): React.ReactElement => (
   // @ts-ignore: `contentComponent` also contains a DrawerNavigationProp
-  <Drawer.Navigator contentComponent={DrawerHomeScreen}>
+  <Drawer.Navigator drawerContent={DrawerHomeScreen}>
     <Drawer.Screen name={AppRoute.HOME} component={HomeBottomNavigator}/>
     <Drawer.Screen name={AppRoute.ABOUT} component={AboutScreen}/>
   </Drawer.Navigator>

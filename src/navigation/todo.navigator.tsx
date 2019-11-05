@@ -73,7 +73,7 @@ const TopTab = createMaterialTopTabNavigator<TodoTabsNavigatorParams>();
 
 const TodoTabsNavigator = (): React.ReactElement => (
   // @ts-ignore: `contentComponent` also contains a DrawerNavigationProp & BottomTabNavigationProp
-  <TopTab.Navigator tabBarComponent={TodoScreen}>
+  <TopTab.Navigator tabBar={TodoScreen}>
     <TopTab.Screen name={AppRoute.TODO_IN_PROGRESS} component={TodoInProgressScreen}/>
     <TopTab.Screen name={AppRoute.TODO_DONE} component={TodoDoneScreen}/>
   </TopTab.Navigator>

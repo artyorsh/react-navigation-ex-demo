@@ -26,7 +26,7 @@ import {
   SignInSchema,
 } from '@app-data/sign-in.model';
 
-export const SignInScreen = (props: SignInScreenProps): LayoutElement => {
+export const SignInScreen = (props: SignInScreenProps) => {
 
   const [shouldRemember, setShouldRemember] = React.useState<boolean>(false);
   const [passwordVisible, setPasswordVisible] = React.useState<boolean>(false);
