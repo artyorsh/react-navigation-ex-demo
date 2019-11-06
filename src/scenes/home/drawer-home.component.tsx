@@ -9,13 +9,13 @@ import {
   DrawerElement,
   MenuItemType,
 } from 'react-native-ui-kitten';
-import { DrawerHomeScreenProps } from '@app-navigation/home.navigator';
-import { AppRoute } from '@app-navigation/app-routes';
+import { DrawerHomeScreenProps } from '../../navigation/home.navigator';
+import { AppRoute } from '../../navigation/app-routes';
 import {
   HomeIcon,
   InfoIcon,
   LogoutIcon,
-} from '@app-assets/icons';
+} from '../../assets/icons';
 
 const drawerData: MenuItemType[] = [
   { icon: HomeIcon, title: 'Home' },

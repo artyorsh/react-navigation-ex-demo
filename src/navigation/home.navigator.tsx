@@ -14,14 +14,14 @@ import {
   BottomTabNavigationProp,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs';
+import { TodoNavigator } from './todo.navigator';
+import { ProfileNavigator } from './profile.navigator';
+import { AppRoute } from './app-routes';
 import {
   BottomHomeScreen,
   DrawerHomeScreen,
   AboutScreen,
-} from '@app-scenes/home';
-import { TodoNavigator } from './todo.navigator';
-import { ProfileNavigator } from './profile.navigator';
-import { AppRoute } from './app-routes';
+} from '../scenes/home';
 
 export interface HomeDrawerNavigatorParams extends ParamListBase {
   [AppRoute.HOME]: undefined;

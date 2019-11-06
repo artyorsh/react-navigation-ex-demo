@@ -7,6 +7,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+
 interface ImageOverlayStyle extends ViewStyle {
   overlayColor?: string;
 }

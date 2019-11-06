@@ -4,24 +4,24 @@ import {
   Tab,
   TabBar,
 } from 'react-native-ui-kitten';
-import { TodoScreenProps } from '@app-navigation/todo.navigator';
-import { AppRoute } from '@app-navigation/app-routes';
+import { TodoScreenProps } from '../../navigation/todo.navigator';
+import { AppRoute } from '../../navigation/app-routes';
 import {
   SafeAreaLayout,
   SafeAreaLayoutElement,
   SaveAreaInset,
-} from '@app-components/safe-area-layout.component';
+} from '../../components/safe-area-layout.component';
 import {
   Toolbar,
   ToolbarMenu,
-} from '@app-components/toolbar.component';
+} from '../../components/toolbar.component';
 import {
   DoneAllIcon,
   GridIcon,
   InfoIcon,
   LogoutIcon,
   MenuIcon,
-} from '@app-assets/icons';
+} from '../../assets/icons';
 
 export const TodoScreen = (props: TodoScreenProps): SafeAreaLayoutElement => {
 

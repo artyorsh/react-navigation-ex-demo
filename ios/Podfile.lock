@@ -219,15 +219,15 @@ PODS:
     - React-cxxreact (= 0.61.2)
     - React-jsi (= 0.61.2)
     - ReactCommon/jscallinvoker (= 0.61.2)
-  - RNCMaskedView (0.1.1):
+  - RNCMaskedView (0.1.5):
     - React
-  - RNGestureHandler (1.4.1):
+  - RNGestureHandler (1.5.0):
     - React
-  - RNReanimated (1.3.0):
+  - RNReanimated (1.4.0):
     - React
-  - RNScreens (2.0.0-alpha.5):
+  - RNScreens (2.0.0-alpha.7):
     - React
-  - RNSVG (9.13.2):
+  - RNSVG (9.13.3):
     - React
   - Yoga (1.14.0)
 
@@ -362,11 +362,11 @@ SPEC CHECKSUMS:
   React-RCTText: e3ef6191cdb627855ff7fe8fa0c1e14094967fb8
   React-RCTVibration: fb54c732fd20405a76598e431aa2f8c2bf527de9
   ReactCommon: 5848032ed2f274fcb40f6b9ec24067787c42d479
-  RNCMaskedView: 6200428cc4fb088ee7ae64a648e39bd8f4e70b41
-  RNGestureHandler: 4cb47a93019c1a201df2644413a0a1569a51c8aa
-  RNReanimated: 6abbbae2e5e72609d85aabd92a982a94566885f1
-  RNScreens: ca5c144495ebf33cc1f66be04a7fd3fafd3e40ff
-  RNSVG: c0ee15672ff52cdbd7bc8d1d8ba488601bd5db02
+  RNCMaskedView: c8b53164b85ecf94c9a44d67082df0f03c1f74cc
+  RNGestureHandler: a4ddde1ffc6e590c8127b8b7eabfdade45475c74
+  RNReanimated: b2ab0b693dddd2339bd2f300e770f6302d2e960c
+  RNScreens: 2f53466846305189a0cfd1745f26b6ca141b3a08
+  RNSVG: f6177f8d7c095fada7cfee2e4bb7388ba426064c
   Yoga: 14927e37bd25376d216b150ab2a561773d57911f
 
 PODFILE CHECKSUM: 80c3d3da94de6d6ecf15780ed49e00088b3bfe48

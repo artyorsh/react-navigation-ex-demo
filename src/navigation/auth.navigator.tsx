@@ -7,12 +7,12 @@ import {
   createStackNavigator,
   StackNavigationProp,
 } from '@react-navigation/stack';
+import { AppRoute } from './app-routes';
 import {
   SignInScreen,
   SignUpScreen,
   ResetPasswordScreen,
-} from '@app-scenes/auth';
-import { AppRoute } from './app-routes';
+} from '../scenes/auth';
 
 interface AuthNavigatorParams extends ParamListBase {
   [AppRoute.SIGN_IN]: undefined;
