@@ -1,6 +1,5 @@
 import React from 'react';
 import { ParamListBase } from '@react-navigation/core';
-import { NavigationNativeContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AuthNavigator } from './auth.navigator';
 import { HomeNavigator } from './home.navigator';
@@ -16,10 +15,8 @@ interface AppNavigatorParams extends ParamListBase {
 const Stack = createStackNavigator<AppNavigatorParams>();
 
 export const AppNavigator = (config: Partial<StackNavigatorProps>): React.ReactElement => (
-  <NavigationNativeContainer>
-    <Stack.Navigator {...config} headerMode='none'>
-      <Stack.Screen name={AppRoute.AUTH} component={AuthNavigator}/>
-      <Stack.Screen name={AppRoute.HOME} component={HomeNavigator}/>
-    </Stack.Navigator>
-  </NavigationNativeContainer>
+  <Stack.Navigator {...config} headerMode='none'>
+    <Stack.Screen name={AppRoute.AUTH} component={AuthNavigator}/>
+    <Stack.Screen name={AppRoute.HOME} component={HomeNavigator}/>
+  </Stack.Navigator>
 );
