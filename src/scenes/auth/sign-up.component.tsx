@@ -16,14 +16,14 @@ import {
   Layout,
   LayoutElement,
 } from 'react-native-ui-kitten';
-import { SignUpScreenProps } from '@app-navigation/auth.navigator';
-import { AppRoute } from '@app-navigation/app-routes';
-import { Toolbar } from '@app-components/toolbar.component';
-import { FormInput } from '@app-components/form-input.component';
+import { SignUpScreenProps } from '../../navigation/auth.navigator';
+import { AppRoute } from '../../navigation/app-routes';
+import { Toolbar } from '../../components/toolbar.component';
+import { FormInput } from '../../components/form-input.component';
 import {
   SignUpData,
   SignUpSchema,
-} from '@app-data/sign-up.model';
+} from '../../data/sign-up.model';
 
 export const SignUpScreen = (props: SignUpScreenProps): LayoutElement => {
 
