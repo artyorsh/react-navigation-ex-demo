@@ -6,7 +6,7 @@ import {
   LayoutElement,
   Text,
 } from 'react-native-ui-kitten';
-import { TodoDoneScreenProps } from '@app-navigation/todo.navigator';
+import { TodoDoneScreenProps } from '../../navigation/todo.navigator';
 
 export const TodoDoneScreen = (props: TodoDoneScreenProps): LayoutElement => (
   <Layout style={styles.container}>

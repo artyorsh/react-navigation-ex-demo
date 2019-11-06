@@ -15,14 +15,7 @@
     "skipLibCheck": true,
     "typeRoots": [
       "./node_modules/@types"
-    ],
-    "paths": {
-      "@app-navigation/*": ["./src/navigation/*"],
-      "@app-scenes/*": ["./src/scenes/*"],
-      "@app-components/*": ["./src/components/*"],
-      "@app-assets/*": ["./src/assets/*"],
-      "@app-data/*": ["./src/data/*"]
-    }
+    ]
   },
   "exclude": [
     "./node_modules",

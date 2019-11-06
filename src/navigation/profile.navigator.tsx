@@ -8,9 +8,9 @@ import {
   createStackNavigator,
   StackNavigationProp,
 } from '@react-navigation/stack';
-import { ProfileScreen } from '@app-scenes/profile';
 import { ProfileTabNavigationProp } from './home.navigator';
 import { AppRoute } from './app-routes';
+import { ProfileScreen } from '../scenes/profile';
 
 interface ProfileNavigatorParams extends ParamListBase {
   [AppRoute.PROFILE]: undefined;

@@ -13,15 +13,15 @@ import {
   MaterialTopTabNavigationProp,
   MaterialTopTabBarProps,
 } from '@react-navigation/material-top-tabs';
+import { TodoTabNavigationProp } from './home.navigator';
+import { AppRoute } from './app-routes';
 import {
   TodoDetailsRouteParams,
   TodoDetailsScreen,
   TodoDoneScreen,
   TodoInProgressScreen,
   TodoScreen,
-} from '@app-scenes/todo';
-import { TodoTabNavigationProp } from './home.navigator';
-import { AppRoute } from './app-routes';
+} from '../scenes/todo';
 
 interface TodoNavigatorParams extends ParamListBase {
   [AppRoute.TODO]: undefined;

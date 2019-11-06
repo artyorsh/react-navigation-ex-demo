@@ -4,16 +4,16 @@ import {
   BottomNavigationTab,
   Divider,
 } from 'react-native-ui-kitten';
-import { BottomHomeScreenProps } from '@app-navigation/home.navigator';
+import { BottomHomeScreenProps } from '../../navigation/home.navigator';
 import {
   SafeAreaLayout,
   SafeAreaLayoutElement,
   SaveAreaInset,
-} from '@app-components/safe-area-layout.component';
+} from '../../components/safe-area-layout.component';
 import {
   LayoutIcon,
   PersonIcon,
-} from '@app-assets/icons';
+} from '../../assets/icons';
 
 export const BottomHomeScreen = (props: BottomHomeScreenProps): SafeAreaLayoutElement => {
 

@@ -8,7 +8,7 @@ import {
   FormikContext,
   useFormikContext,
 } from 'formik';
-import { AlertTriangleIcon } from '@app-assets/icons';
+import { AlertTriangleIcon } from '../assets/icons';
 
 interface FormInputProps extends InputProps {
   id: string;

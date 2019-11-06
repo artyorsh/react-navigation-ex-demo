@@ -10,8 +10,8 @@ import {
   IconRegistry,
 } from 'react-native-ui-kitten';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
-import { AppNavigator } from '@app-navigation/app.navigator';
-import { AppRoute } from '@app-navigation/app-routes';
+import { AppNavigator } from './navigation/app.navigator';
+import { AppRoute } from './navigation/app-routes';
 
 export default (): React.ReactFragment => {
 

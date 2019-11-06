@@ -13,11 +13,11 @@ import {
   EdgeInsets,
   useSafeArea,
 } from 'react-native-safe-area-context';
-import { TodoDetailsScreenProps } from '@app-navigation/todo.navigator';
-import { Toolbar } from '@app-components/toolbar.component';
-import { ImageOverlay } from '@app-components/image-overlay.component';
-import { ProgressBar } from '@app-components/progress-bar.component';
-import { Todo } from '@app-data/todo.model';
+import { TodoDetailsScreenProps } from '../../navigation/todo.navigator';
+import { Toolbar } from '../../components/toolbar.component';
+import { ImageOverlay } from '../../components/image-overlay.component';
+import { ProgressBar } from '../../components/progress-bar.component';
+import { Todo } from '../../data/todo.model';
 
 export interface TodoDetailsRouteParams {
   todo: Todo;
