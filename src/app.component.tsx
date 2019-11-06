@@ -1,5 +1,6 @@
 import React from 'react';
 import { YellowBox } from 'react-native';
+import { NavigationNativeContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {
   light,
@@ -25,7 +26,9 @@ export default (): React.ReactFragment => {
         mapping={mapping}
         theme={light}>
         <SafeAreaProvider>
-          <AppNavigator initialRouteName={isAuthorized ? AppRoute.HOME : AppRoute.AUTH}/>
+          <NavigationNativeContainer>
+            <AppNavigator initialRouteName={isAuthorized ? AppRoute.HOME : AppRoute.AUTH}/>
+          </NavigationNativeContainer>
         </SafeAreaProvider>
       </ApplicationProvider>
     </React.Fragment>
