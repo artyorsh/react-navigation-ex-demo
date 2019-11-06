@@ -1,5 +1,6 @@
 import React from 'react';
 import { YellowBox } from 'react-native';
+import { NavigationNativeContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import {
   light,
@@ -10,8 +11,8 @@ import {
   IconRegistry,
 } from 'react-native-ui-kitten';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
-import { AppNavigator } from '@app-navigation/app.navigator';
-import { AppRoute } from '@app-navigation/app-routes';
+import { AppNavigator } from './navigation/app.navigator';
+import { AppRoute } from './navigation/app-routes';
 
 export default (): React.ReactFragment => {
 
@@ -25,7 +26,9 @@ export default (): React.ReactFragment => {
         mapping={mapping}
         theme={light}>
         <SafeAreaProvider>
-          <AppNavigator initialRouteName={isAuthorized ? AppRoute.HOME : AppRoute.AUTH}/>
+          <NavigationNativeContainer>
+            <AppNavigator initialRouteName={isAuthorized ? AppRoute.HOME : AppRoute.AUTH}/>
+          </NavigationNativeContainer>
         </SafeAreaProvider>
       </ApplicationProvider>
     </React.Fragment>

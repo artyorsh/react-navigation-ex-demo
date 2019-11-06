@@ -5,13 +5,13 @@ import {
   Layout,
   Text,
 } from 'react-native-ui-kitten';
-import { AboutScreenProps } from '@app-navigation/home.navigator';
-import { Toolbar } from '@app-components/toolbar.component';
+import { AboutScreenProps } from '../../navigation/home.navigator';
+import { Toolbar } from '../../components/toolbar.component';
 import {
   SafeAreaLayout,
   SafeAreaLayoutElement,
   SaveAreaInset,
-} from '@app-components/safe-area-layout.component';
+} from '../../components/safe-area-layout.component';
 
 export const AboutScreen = (props: AboutScreenProps): SafeAreaLayoutElement => (
   <SafeAreaLayout

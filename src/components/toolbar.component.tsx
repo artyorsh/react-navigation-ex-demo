@@ -12,7 +12,7 @@ import {
 import {
   BackIcon,
   MoreVerticalIcon,
-} from '@app-assets/icons';
+} from '../../assets/icons';
 
 export type ToolbarMenu = OverflowMenuItemType[];
 

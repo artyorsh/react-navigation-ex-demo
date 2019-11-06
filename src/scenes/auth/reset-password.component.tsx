@@ -16,14 +16,14 @@ import {
   Formik,
   FormikProps,
 } from 'formik';
-import { ResetPasswordScreenProps } from '@app-navigation/auth.navigator';
-import { AppRoute } from '@app-navigation/app-routes';
-import { FormInput } from '@app-components/form-input.component';
-import { Toolbar } from '@app-components/toolbar.component';
+import { ResetPasswordScreenProps } from '../../navigation/auth.navigator';
+import { AppRoute } from '../../navigation/app-routes';
+import { FormInput } from '../../components/form-input.component';
+import { Toolbar } from '../../components/toolbar.component';
 import {
   ResetPasswordData,
   ResetPasswordSchema,
-} from '@app-data/reset-password.model';
+} from '../../data/reset-password.model';
 
 export const ResetPasswordScreen = (props: ResetPasswordScreenProps): LayoutElement => {
 

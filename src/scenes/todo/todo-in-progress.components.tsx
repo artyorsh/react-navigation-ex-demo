@@ -11,11 +11,11 @@ import {
   ThemedComponentProps,
   withStyles,
 } from 'react-native-ui-kitten';
-import { TodoInProgressScreenProps } from '@app-navigation/todo.navigator';
-import { AppRoute } from '@app-navigation/app-routes';
-import { ProgressBar } from '@app-components/progress-bar.component';
-import { SearchIcon } from '@app-assets/icons';
-import { Todo } from '@app-data/todo.model';
+import { TodoInProgressScreenProps } from '../../navigation/todo.navigator';
+import { AppRoute } from '../../navigation/app-routes';
+import { ProgressBar } from '../../components/progress-bar.component';
+import { SearchIcon } from '../../assets/icons';
+import { Todo } from '../../data/todo.model';
 
 const allTodos: Todo[] = [
   Todo.mocked0(),
