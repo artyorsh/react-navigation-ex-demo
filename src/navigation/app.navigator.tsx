@@ -14,8 +14,8 @@ interface AppNavigatorParams extends ParamListBase {
 
 const Stack = createStackNavigator<AppNavigatorParams>();
 
-export const AppNavigator = (config: Partial<StackNavigatorProps>): React.ReactElement => (
-  <Stack.Navigator {...config} headerMode='none'>
+export const AppNavigator = (props: Partial<StackNavigatorProps>): React.ReactElement => (
+  <Stack.Navigator {...props} headerMode='none'>
     <Stack.Screen name={AppRoute.AUTH} component={AuthNavigator}/>
     <Stack.Screen name={AppRoute.HOME} component={HomeNavigator}/>
   </Stack.Navigator>
