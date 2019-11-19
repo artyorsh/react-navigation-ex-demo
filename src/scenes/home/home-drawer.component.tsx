@@ -10,18 +10,6 @@ import {
   MenuItemType,
 } from 'react-native-ui-kitten';
 import { DrawerHomeScreenProps } from '../../navigation/home.navigator';
-import { AppRoute } from '../../navigation/app-routes';
-import {
-  HomeIcon,
-  InfoIcon,
-  LogoutIcon,
-} from '../../assets/icons';
-
-const drawerData: MenuItemType[] = [
-  { icon: HomeIcon, title: 'Home' },
-  { icon: InfoIcon, title: 'About' },
-  { icon: LogoutIcon, title: 'Log Out' },
-];
 
 const DrawerHeader = (): React.ReactElement<ImageBackgroundProps> => (
   <ImageBackground
@@ -30,27 +18,27 @@ const DrawerHeader = (): React.ReactElement<ImageBackgroundProps> => (
   />
 );
 
-export const DrawerHomeScreen = (props: DrawerHomeScreenProps): DrawerElement => {
+export const HomeDrawer = (props: DrawerHomeScreenProps): DrawerElement => {
 
   const onMenuItemSelect = (index: number): void => {
-    const { [index]: selectedItem } = drawerData;
-
-    switch (selectedItem.title) {
-      case 'Log Out':
-        props.navigation.navigate(AppRoute.AUTH);
-        break;
-      default:
-        props.navigation.navigate(selectedItem.title);
-        break;
-    }
-
+    const selectedTabRoute: string = props.state.routeNames[index];
+    props.navigation.navigate(selectedTabRoute);
     props.navigation.closeDrawer();
+  };
+
+  const createNavigationItemForRoute = (route): MenuItemType => {
+    const { options } = props.descriptors[route.key];
+    return {
+      routeName: route.name,
+      title: options.title,
+      icon: options.drawerIcon,
+    };
   };
 
   return (
     <Drawer
       header={DrawerHeader}
-      data={drawerData}
+      data={props.state.routes.map(createNavigationItemForRoute)}
       onSelect={onMenuItemSelect}
     />
   );

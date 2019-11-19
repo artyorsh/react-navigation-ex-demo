@@ -10,8 +10,8 @@ import {
 } from '@react-navigation/stack';
 import {
   createMaterialTopTabNavigator,
-  MaterialTopTabNavigationProp,
   MaterialTopTabBarProps,
+  MaterialTopTabNavigationProp,
 } from '@react-navigation/material-top-tabs';
 import { TodoTabNavigationProp } from './home.navigator';
 import { AppRoute } from './app-routes';
@@ -20,8 +20,12 @@ import {
   TodoDetailsScreen,
   TodoDoneScreen,
   TodoInProgressScreen,
-  TodoScreen,
+  TodoTabBar,
 } from '../scenes/todo';
+import {
+  DoneAllIcon,
+  GridIcon,
+} from '../assets/icons';
 
 interface TodoNavigatorParams extends ParamListBase {
   [AppRoute.TODO]: undefined;
@@ -38,18 +42,14 @@ export type TodoScreenProps = MaterialTopTabBarProps & {
 }
 
 export interface TodoInProgressScreenProps {
-  navigation: CompositeNavigationProp<
-    TodoTabNavigationProp,
-    MaterialTopTabNavigationProp<TodoTabsNavigatorParams, AppRoute.TODO_IN_PROGRESS>
-  >;
+  navigation: CompositeNavigationProp<TodoTabNavigationProp,
+    MaterialTopTabNavigationProp<TodoTabsNavigatorParams, AppRoute.TODO_IN_PROGRESS>>;
   route: RouteProp<TodoTabsNavigatorParams, AppRoute.TODO_IN_PROGRESS>;
 }
 
 export interface TodoDoneScreenProps {
-  navigation: CompositeNavigationProp<
-    TodoTabNavigationProp,
-    MaterialTopTabNavigationProp<TodoTabsNavigatorParams, AppRoute.TODO_DONE>
-  >;
+  navigation: CompositeNavigationProp<TodoTabNavigationProp,
+    MaterialTopTabNavigationProp<TodoTabsNavigatorParams, AppRoute.TODO_DONE>>;
   route: RouteProp<TodoTabsNavigatorParams, AppRoute.TODO_DONE>;
 }
 
@@ -72,10 +72,18 @@ const TopTab = createMaterialTopTabNavigator<TodoTabsNavigatorParams>();
 // Anyway, it's possible to create top tab navigation with gesture support with UI Kitten `TabView`
 
 const TodoTabsNavigator = (): React.ReactElement => (
-  // @ts-ignore: `contentComponent` also contains a DrawerNavigationProp & BottomTabNavigationProp
-  <TopTab.Navigator tabBar={TodoScreen}>
-    <TopTab.Screen name={AppRoute.TODO_IN_PROGRESS} component={TodoInProgressScreen}/>
-    <TopTab.Screen name={AppRoute.TODO_DONE} component={TodoDoneScreen}/>
+  // @ts-ignore: `tabBar` also contains a DrawerNavigationProp & BottomTabNavigationProp
+  <TopTab.Navigator tabBar={props => <TodoTabBar {...props} />}>
+    <TopTab.Screen
+      name={AppRoute.TODO_IN_PROGRESS}
+      component={TodoInProgressScreen}
+      options={{ title: 'IN PROGRESS', tabBarIcon: GridIcon }}
+    />
+    <TopTab.Screen
+      name={AppRoute.TODO_DONE}
+      component={TodoDoneScreen}
+      options={{ title: 'DONE', tabBarIcon: DoneAllIcon }}
+    />
   </TopTab.Navigator>
 );
 

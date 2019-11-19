@@ -2,6 +2,7 @@ import React from 'react';
 import {
   BottomNavigation,
   BottomNavigationTab,
+  BottomNavigationTabElement,
   Divider,
 } from 'react-native-ui-kitten';
 import { BottomHomeScreenProps } from '../../navigation/home.navigator';
@@ -10,16 +11,23 @@ import {
   SafeAreaLayoutElement,
   SaveAreaInset,
 } from '../../components/safe-area-layout.component';
-import {
-  LayoutIcon,
-  PersonIcon,
-} from '../../assets/icons';
 
-export const BottomHomeScreen = (props: BottomHomeScreenProps): SafeAreaLayoutElement => {
+export const HomeTabBar = (props: BottomHomeScreenProps): SafeAreaLayoutElement => {
 
   const onSelect = (index: number): void => {
-    const { [index]: selectedTabRoute } = props.state.routeNames;
+    const selectedTabRoute: string = props.state.routeNames[index];
     props.navigation.navigate(selectedTabRoute);
+  };
+
+  const createNavigationTabForRoute = (route): BottomNavigationTabElement => {
+    const { options } = props.descriptors[route.key];
+    return (
+      <BottomNavigationTab
+        key={route.key}
+        title={options.title}
+        icon={options.tabBarIcon}
+      />
+    );
   };
 
   return (
@@ -29,14 +37,7 @@ export const BottomHomeScreen = (props: BottomHomeScreenProps): SafeAreaLayoutEl
         appearance='noIndicator'
         selectedIndex={props.state.index}
         onSelect={onSelect}>
-        <BottomNavigationTab
-          icon={LayoutIcon}
-          title='TODO'
-        />
-        <BottomNavigationTab
-          icon={PersonIcon}
-          title='PROFILE'
-        />
+        {props.state.routes.map(createNavigationTabForRoute)}
       </BottomNavigation>
     </SafeAreaLayout>
   );
