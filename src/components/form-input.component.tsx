@@ -5,10 +5,10 @@ import {
   InputProps,
 } from 'react-native-ui-kitten';
 import {
-  FormikContext,
+  FormikContextType,
   useFormikContext,
 } from 'formik';
-import { AlertTriangleIcon } from '../../assets/icons';
+import { AlertTriangleIcon } from '../assets/icons';
 
 interface FormInputProps extends InputProps {
   id: string;
@@ -16,7 +16,7 @@ interface FormInputProps extends InputProps {
 
 export const FormInput = ({ id, ...inputProps }: FormInputProps): InputElement => {
 
-  const formContext: FormikContext<{}> = useFormikContext();
+  const formContext: FormikContextType<{}> = useFormikContext();
 
   // @ts-ignore
   const { [id]: error } = formContext.errors;
