@@ -1,5 +1,4 @@
 import React from 'react';
-import { ParamListBase } from '@react-navigation/core';
 import { createStackNavigator } from '@react-navigation/stack';
 import { AuthNavigator } from './auth.navigator';
 import { HomeNavigator } from './home.navigator';
@@ -7,7 +6,7 @@ import { AppRoute } from './app-routes';
 
 type StackNavigatorProps = React.ComponentProps<typeof Stack.Navigator>;
 
-interface AppNavigatorParams extends ParamListBase {
+export type AppNavigatorParams = {
   [AppRoute.AUTH]: undefined;
   [AppRoute.HOME]: undefined;
 }

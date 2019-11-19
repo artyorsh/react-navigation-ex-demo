@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   CompositeNavigationProp,
-  ParamListBase,
   RouteProp,
 } from '@react-navigation/core';
 import {
@@ -27,12 +26,12 @@ import {
   GridIcon,
 } from '../assets/icons';
 
-interface TodoNavigatorParams extends ParamListBase {
+type TodoNavigatorParams = {
   [AppRoute.TODO]: undefined;
   [AppRoute.TODO_DETAILS]: TodoDetailsRouteParams;
 }
 
-interface TodoTabsNavigatorParams extends ParamListBase {
+type TodoTabsNavigatorParams = {
   [AppRoute.TODO_IN_PROGRESS]: undefined;
   [AppRoute.TODO_DONE]: undefined;
 }
