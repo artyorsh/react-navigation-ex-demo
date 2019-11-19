@@ -8,7 +8,6 @@ import {
   Button,
   CheckBox,
   Layout,
-  LayoutElement,
 } from 'react-native-ui-kitten';
 import {
   Formik,

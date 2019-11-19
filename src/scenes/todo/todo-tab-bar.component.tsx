@@ -3,6 +3,7 @@ import {
   Divider,
   Tab,
   TabBar,
+  TabElement,
 } from 'react-native-ui-kitten';
 import { TodoScreenProps } from '../../navigation/todo.navigator';
 import { AppRoute } from '../../navigation/app-routes';
@@ -16,14 +17,12 @@ import {
   ToolbarMenu,
 } from '../../components/toolbar.component';
 import {
-  DoneAllIcon,
-  GridIcon,
   InfoIcon,
   LogoutIcon,
   MenuIcon,
 } from '../../assets/icons';
 
-export const TodoScreen = (props: TodoScreenProps): SafeAreaLayoutElement => {
+export const TodoTabBar = (props: TodoScreenProps): SafeAreaLayoutElement => {
 
   const menu: ToolbarMenu = [
     { title: 'About', icon: InfoIcon },
@@ -44,8 +43,19 @@ export const TodoScreen = (props: TodoScreenProps): SafeAreaLayoutElement => {
   };
 
   const onTabSelect = (index: number): void => {
-    const { [index]: selectedTabRoute } = props.state.routeNames;
+    const selectedTabRoute: string = props.state.routeNames[index];
     props.navigation.navigate(selectedTabRoute);
+  };
+
+  const createNavigationTabForRoute = (route): TabElement => {
+    const { options } = props.descriptors[route.key];
+    return (
+      <Tab
+        key={route.key}
+        title={options.title}
+        icon={options.tabBarIcon}
+      />
+    );
   };
 
   return (
@@ -60,14 +70,7 @@ export const TodoScreen = (props: TodoScreenProps): SafeAreaLayoutElement => {
       <TabBar
         selectedIndex={props.state.index}
         onSelect={onTabSelect}>
-        <Tab
-          icon={GridIcon}
-          title='IN PROGRESS'
-        />
-        <Tab
-          icon={DoneAllIcon}
-          title='DONE'
-        />
+        {props.state.routes.map(createNavigationTabForRoute)}
       </TabBar>
       <Divider/>
     </SafeAreaLayout>

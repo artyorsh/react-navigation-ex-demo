@@ -18,10 +18,16 @@ import { TodoNavigator } from './todo.navigator';
 import { ProfileNavigator } from './profile.navigator';
 import { AppRoute } from './app-routes';
 import {
-  BottomHomeScreen,
-  DrawerHomeScreen,
   AboutScreen,
+  HomeDrawer,
+  HomeTabBar,
 } from '../scenes/home';
+import {
+  HomeIcon,
+  InfoIcon,
+  LayoutIcon,
+  PersonIcon,
+} from '../assets/icons';
 
 export interface HomeDrawerNavigatorParams extends ParamListBase {
   [AppRoute.HOME]: undefined;
@@ -70,18 +76,34 @@ const BottomTab = createBottomTabNavigator<HomeBottomTabsNavigatorParams>();
 // like it is described in https://reactnavigation.org/docs/en/next/auth-flow.html
 
 const HomeBottomNavigator = (): React.ReactElement => (
-  // @ts-ignore: `tabBarComponent` also contains a DrawerNavigationProp
-  <BottomTab.Navigator tabBar={BottomHomeScreen}>
-    <BottomTab.Screen name={AppRoute.TODO} component={TodoNavigator}/>
-    <BottomTab.Screen name={AppRoute.PROFILE} component={ProfileNavigator}/>
+  // @ts-ignore: `tabBar` also contains a DrawerNavigationProp
+  <BottomTab.Navigator tabBar={HomeTabBar}>
+    <BottomTab.Screen
+      name={AppRoute.TODO}
+      component={TodoNavigator}
+      options={{ title: 'TODO', tabBarIcon: LayoutIcon }}
+    />
+    <BottomTab.Screen
+      name={AppRoute.PROFILE}
+      component={ProfileNavigator}
+      options={{ title: 'PROFILE', tabBarIcon: PersonIcon }}
+    />
   </BottomTab.Navigator>
 );
 
 export const HomeNavigator = (): React.ReactElement => (
-  // @ts-ignore: `contentComponent` also contains a DrawerNavigationProp
-  <Drawer.Navigator drawerContent={DrawerHomeScreen}>
-    <Drawer.Screen name={AppRoute.HOME} component={HomeBottomNavigator}/>
-    <Drawer.Screen name={AppRoute.ABOUT} component={AboutScreen}/>
+  // @ts-ignore: `drawerContent` also contains a DrawerNavigationProp
+  <Drawer.Navigator drawerContent={HomeDrawer}>
+    <Drawer.Screen
+      name={AppRoute.HOME}
+      component={HomeBottomNavigator}
+      options={{ title: 'Home', drawerIcon: HomeIcon }}
+    />
+    <Drawer.Screen
+      name={AppRoute.ABOUT}
+      component={AboutScreen}
+      options={{ title: 'About', drawerIcon: InfoIcon }}
+    />
   </Drawer.Navigator>
 );
 

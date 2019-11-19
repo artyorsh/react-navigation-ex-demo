@@ -1,3 +1,3 @@
-export { BottomHomeScreen } from './bottom-home.component';
-export { DrawerHomeScreen } from './drawer-home.component';
 export { AboutScreen } from './about.component';
+export { HomeDrawer } from './home-drawer.component';
+export { HomeTabBar } from './home-tab-bar.component';
