@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   CompositeNavigationProp,
-  ParamListBase,
   RouteProp,
 } from '@react-navigation/core';
 import {
@@ -29,12 +28,12 @@ import {
   PersonIcon,
 } from '../assets/icons';
 
-export interface HomeDrawerNavigatorParams extends ParamListBase {
+type HomeDrawerNavigatorParams = {
   [AppRoute.HOME]: undefined;
   [AppRoute.ABOUT]: undefined;
 }
 
-export interface HomeBottomTabsNavigatorParams extends ParamListBase {
+type HomeBottomTabsNavigatorParams = {
   [AppRoute.TODO]: undefined;
   [AppRoute.PROFILE]: undefined;
 }

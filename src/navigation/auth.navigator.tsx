@@ -1,20 +1,18 @@
 import React from 'react';
-import {
-  ParamListBase,
-  RouteProp,
-} from '@react-navigation/core';
+import { RouteProp } from '@react-navigation/core';
 import {
   createStackNavigator,
   StackNavigationProp,
 } from '@react-navigation/stack';
 import { AppRoute } from './app-routes';
+import { AppNavigatorParams } from './app.navigator';
 import {
   SignInScreen,
   SignUpScreen,
   ResetPasswordScreen,
 } from '../scenes/auth';
 
-interface AuthNavigatorParams extends ParamListBase {
+type AuthNavigatorParams = AppNavigatorParams & {
   [AppRoute.SIGN_IN]: undefined;
   [AppRoute.SIGN_UP]: undefined;
   [AppRoute.RESET_PASSWORD]: undefined;

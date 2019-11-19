@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   CompositeNavigationProp,
-  ParamListBase,
   RouteProp,
 } from '@react-navigation/core';
 import {
@@ -12,7 +11,7 @@ import { ProfileTabNavigationProp } from './home.navigator';
 import { AppRoute } from './app-routes';
 import { ProfileScreen } from '../scenes/profile';
 
-interface ProfileNavigatorParams extends ParamListBase {
+type ProfileNavigatorParams = {
   [AppRoute.PROFILE]: undefined;
 }
 
