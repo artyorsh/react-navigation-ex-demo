@@ -11,7 +11,7 @@ import {
   Layout,
   LayoutElement,
   LayoutProps,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 
 export enum SaveAreaInset {
   TOP = 'top',

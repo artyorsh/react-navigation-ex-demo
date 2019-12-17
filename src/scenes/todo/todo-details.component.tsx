@@ -8,7 +8,7 @@ import {
   Layout,
   LayoutElement,
   Text,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 import {
   EdgeInsets,
   useSafeArea,
