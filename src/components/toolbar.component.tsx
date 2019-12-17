@@ -8,7 +8,7 @@ import {
   TopNavigationAction,
   TopNavigationActionElement,
   TopNavigationProps,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 import {
   BackIcon,
   MoreVerticalIcon,

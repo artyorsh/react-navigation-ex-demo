@@ -15,7 +15,7 @@ import {
   Button,
   Layout,
   LayoutElement,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 import { SignUpScreenProps } from '../../navigation/auth.navigator';
 import { AppRoute } from '../../navigation/app-routes';
 import { Toolbar } from '../../components/toolbar.component';

@@ -8,7 +8,7 @@ import {
   Drawer,
   DrawerElement,
   MenuItemType,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 import { DrawerHomeScreenProps } from '../../navigation/home.navigator';
 
 const DrawerHeader = (): React.ReactElement<ImageBackgroundProps> => (

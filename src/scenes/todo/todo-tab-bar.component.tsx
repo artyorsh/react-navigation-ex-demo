@@ -4,7 +4,7 @@ import {
   Tab,
   TabBar,
   TabElement,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 import { TodoScreenProps } from '../../navigation/todo.navigator';
 import { AppRoute } from '../../navigation/app-routes';
 import {
