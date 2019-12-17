@@ -9,7 +9,7 @@ import {
 import {
   ApplicationProvider,
   IconRegistry,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import { AppNavigator } from './navigation/app.navigator';
 import { AppRoute } from './navigation/app-routes';

@@ -10,7 +10,7 @@ import {
   Text,
   ThemedComponentProps,
   withStyles,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 import { TodoInProgressScreenProps } from '../../navigation/todo.navigator';
 import { AppRoute } from '../../navigation/app-routes';
 import { ProgressBar } from '../../components/progress-bar.component';

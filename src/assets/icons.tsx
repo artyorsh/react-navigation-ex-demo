@@ -2,7 +2,7 @@ import React from 'react';
 import {
   Icon,
   IconElement,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 
 export const BackIcon = (style): IconElement => (
   <Icon {...style} name='arrow-back'/>

@@ -4,7 +4,7 @@ import {
   Divider,
   Layout,
   Text,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 import { ProfileScreenProps } from '../../navigation/profile.navigator';
 import { Toolbar } from '../../components/toolbar.component';
 import {

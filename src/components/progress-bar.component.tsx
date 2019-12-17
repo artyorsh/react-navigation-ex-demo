@@ -7,7 +7,7 @@ import {
   Text,
   ThemedComponentProps,
   withStyles,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 
 export interface ProgressBarProps extends ViewProps, ThemedComponentProps {
   progress: number;
