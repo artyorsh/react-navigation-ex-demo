@@ -4,7 +4,7 @@ import {
   BottomNavigationTab,
   BottomNavigationTabElement,
   Divider,
-} from 'react-native-ui-kitten';
+} from '@ui-kitten/components';
 import { BottomHomeScreenProps } from '../../navigation/home.navigator';
 import {
   SafeAreaLayout,
