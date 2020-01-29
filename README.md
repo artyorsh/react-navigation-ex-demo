@@ -15,7 +15,7 @@ git clone https://github.com/artyorsh/react-navigation-ex-demo
 
 Checkout to a branch that contains complete examples
 ```bash
-git checkout complete-examples
+git checkout complete-exmaples
 ```
 
 [link:react-navigation-ex]: https://github.com/react-navigation/navigation-ex
