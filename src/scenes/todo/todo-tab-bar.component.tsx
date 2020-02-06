@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Divider,
-  Tab,
-  TabBar,
-  TabElement,
-} from '@ui-kitten/components';
+import { Divider, Tab, TabBar, TabElement } from '@ui-kitten/components';
 import { TodoScreenProps } from '../../navigation/todo.navigator';
 import { AppRoute } from '../../navigation/app-routes';
 import {
@@ -12,15 +7,8 @@ import {
   SafeAreaLayoutElement,
   SaveAreaInset,
 } from '../../components/safe-area-layout.component';
-import {
-  Toolbar,
-  ToolbarMenu,
-} from '../../components/toolbar.component';
-import {
-  InfoIcon,
-  LogoutIcon,
-  MenuIcon,
-} from '../../assets/icons';
+import { Toolbar, ToolbarMenu } from '../../components/toolbar.component';
+import { InfoIcon, LogoutIcon, MenuIcon } from '../../assets/icons';
 
 export const TodoTabBar = (props: TodoScreenProps): SafeAreaLayoutElement => {
 

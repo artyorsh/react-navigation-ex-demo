@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  CompositeNavigationProp,
-  RouteProp,
-} from '@react-navigation/core';
+import { CompositeNavigationProp, RouteProp } from '@react-navigation/core';
 import {
   createDrawerNavigator,
   DrawerContentComponentProps,
@@ -16,17 +13,8 @@ import {
 import { TodoNavigator } from './todo.navigator';
 import { ProfileNavigator } from './profile.navigator';
 import { AppRoute } from './app-routes';
-import {
-  AboutScreen,
-  HomeDrawer,
-  HomeTabBar,
-} from '../scenes/home';
-import {
-  HomeIcon,
-  InfoIcon,
-  LayoutIcon,
-  PersonIcon,
-} from '../assets/icons';
+import { AboutScreen, HomeDrawer, HomeTabBar } from '../scenes/home';
+import { HomeIcon, InfoIcon, LayoutIcon, PersonIcon } from '../assets/icons';
 
 type HomeDrawerNavigatorParams = {
   [AppRoute.HOME]: undefined;
@@ -38,15 +26,11 @@ type HomeBottomTabsNavigatorParams = {
   [AppRoute.PROFILE]: undefined;
 }
 
-export type TodoTabNavigationProp = CompositeNavigationProp<
-  BottomTabNavigationProp<HomeBottomTabsNavigatorParams, AppRoute.TODO>,
-  DrawerNavigationProp<HomeDrawerNavigatorParams, AppRoute.HOME>
->;
+export type TodoTabNavigationProp = CompositeNavigationProp<BottomTabNavigationProp<HomeBottomTabsNavigatorParams, AppRoute.TODO>,
+  DrawerNavigationProp<HomeDrawerNavigatorParams, AppRoute.HOME>>;
 
-export type ProfileTabNavigationProp = CompositeNavigationProp<
-  BottomTabNavigationProp<HomeBottomTabsNavigatorParams, AppRoute.PROFILE>,
-  DrawerNavigationProp<HomeDrawerNavigatorParams, AppRoute.HOME>
->;
+export type ProfileTabNavigationProp = CompositeNavigationProp<BottomTabNavigationProp<HomeBottomTabsNavigatorParams, AppRoute.PROFILE>,
+  DrawerNavigationProp<HomeDrawerNavigatorParams, AppRoute.HOME>>;
 
 export interface AboutScreenProps {
   navigation: DrawerNavigationProp<HomeDrawerNavigatorParams, AppRoute.ABOUT>;

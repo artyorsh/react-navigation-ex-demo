@@ -1,15 +1,9 @@
 import React from 'react';
 import { YellowBox } from 'react-native';
-import { NavigationNativeContainer } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import {
-  light,
-  mapping,
-} from '@eva-design/eva';
-import {
-  ApplicationProvider,
-  IconRegistry,
-} from '@ui-kitten/components';
+import { light, mapping } from '@eva-design/eva';
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import { AppNavigator } from './navigation/app.navigator';
 import { AppRoute } from './navigation/app-routes';
@@ -26,9 +20,9 @@ export default (): React.ReactFragment => {
         mapping={mapping}
         theme={light}>
         <SafeAreaProvider>
-          <NavigationNativeContainer>
+          <NavigationContainer>
             <AppNavigator initialRouteName={isAuthorized ? AppRoute.HOME : AppRoute.AUTH}/>
-          </NavigationNativeContainer>
+          </NavigationContainer>
         </SafeAreaProvider>
       </ApplicationProvider>
     </React.Fragment>
@@ -37,6 +31,6 @@ export default (): React.ReactFragment => {
 
 // For some reason, starting from 0.61, react-native-gesture-handler throws this warning
 // https://github.com/facebook/react-native/issues/26226
-YellowBox.ignoreWarnings([
-  'RCTRootView cancelTouches',
-]);
+// YellowBox.ignoreWarnings([
+//   'RCTRootView cancelTouches',
+// ]);

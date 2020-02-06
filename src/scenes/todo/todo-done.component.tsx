@@ -1,11 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import {
-  Button,
-  Layout,
-  LayoutElement,
-  Text,
-} from '@ui-kitten/components';
+import { Button, Layout, LayoutElement, Text } from '@ui-kitten/components';
 import { TodoDoneScreenProps } from '../../navigation/todo.navigator';
 
 export const TodoDoneScreen = (props: TodoDoneScreenProps): LayoutElement => (
