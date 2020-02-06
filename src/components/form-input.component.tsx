@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  Input,
-  InputElement,
-  InputProps,
-} from '@ui-kitten/components';
-import {
-  FormikContextType,
-  useFormikContext,
-} from 'formik';
+import { Input, InputElement, InputProps } from '@ui-kitten/components';
+import { FormikContextType, useFormikContext } from 'formik';
 import { AlertTriangleIcon } from '../assets/icons';
 
 interface FormInputProps extends InputProps {

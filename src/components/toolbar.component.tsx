@@ -9,10 +9,7 @@ import {
   TopNavigationActionElement,
   TopNavigationProps,
 } from '@ui-kitten/components';
-import {
-  BackIcon,
-  MoreVerticalIcon,
-} from '../assets/icons';
+import { BackIcon, MoreVerticalIcon } from '../assets/icons';
 
 export type ToolbarMenu = OverflowMenuItemType[];
 
