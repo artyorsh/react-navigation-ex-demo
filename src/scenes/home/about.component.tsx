@@ -1,10 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import {
-  Divider,
-  Layout,
-  Text,
-} from '@ui-kitten/components';
+import { Divider, Layout, Text } from '@ui-kitten/components';
 import { AboutScreenProps } from '../../navigation/home.navigator';
 import { Toolbar } from '../../components/toolbar.component';
 import {
