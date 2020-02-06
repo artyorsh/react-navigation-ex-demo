@@ -1,12 +1,6 @@
 import React from 'react';
-import {
-  CompositeNavigationProp,
-  RouteProp,
-} from '@react-navigation/core';
-import {
-  createStackNavigator,
-  StackNavigationProp,
-} from '@react-navigation/stack';
+import { CompositeNavigationProp, RouteProp } from '@react-navigation/core';
+import { createStackNavigator, StackNavigationProp } from '@react-navigation/stack';
 import {
   createMaterialTopTabNavigator,
   MaterialTopTabBarProps,
@@ -21,10 +15,7 @@ import {
   TodoInProgressScreen,
   TodoTabBar,
 } from '../scenes/todo';
-import {
-  DoneAllIcon,
-  GridIcon,
-} from '../assets/icons';
+import { DoneAllIcon, GridIcon } from '../assets/icons';
 
 type TodoNavigatorParams = {
   [AppRoute.TODO]: undefined;

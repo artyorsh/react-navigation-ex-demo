@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  Input,
-  InputElement,
-  InputProps,
-} from '@ui-kitten/components';
-import {
-  FormikContext,
-  useFormikContext,
-} from 'formik';
+import { Input, InputElement, InputProps } from '@ui-kitten/components';
+import { useFormikContext } from 'formik';
 import { AlertTriangleIcon } from '../assets/icons';
 
 interface FormInputProps extends InputProps {
@@ -16,7 +9,7 @@ interface FormInputProps extends InputProps {
 
 export const FormInput = ({ id, ...inputProps }: FormInputProps): InputElement => {
 
-  const formContext: FormikContext<{}> = useFormikContext();
+  const formContext = useFormikContext();
 
   // @ts-ignore
   const { [id]: error } = formContext.errors;
