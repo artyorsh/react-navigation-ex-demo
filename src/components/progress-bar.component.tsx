@@ -1,13 +1,6 @@
 import React from 'react';
-import {
-  View,
-  ViewProps,
-} from 'react-native';
-import {
-  Text,
-  ThemedComponentProps,
-  withStyles,
-} from '@ui-kitten/components';
+import { View, ViewProps } from 'react-native';
+import { Text, ThemedComponentProps, withStyles } from '@ui-kitten/components';
 
 export interface ProgressBarProps extends ViewProps, ThemedComponentProps {
   progress: number;

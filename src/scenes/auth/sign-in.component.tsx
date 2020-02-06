@@ -1,30 +1,12 @@
 import React from 'react';
-import {
-  ImageBackground,
-  StyleSheet,
-  View,
-} from 'react-native';
-import {
-  Button,
-  CheckBox,
-  Layout,
-  LayoutElement,
-} from '@ui-kitten/components';
-import {
-  Formik,
-  FormikProps,
-} from 'formik';
+import { ImageBackground, StyleSheet, View } from 'react-native';
+import { Button, CheckBox, Layout, LayoutElement } from '@ui-kitten/components';
+import { Formik, FormikProps } from 'formik';
 import { SignInScreenProps } from '../../navigation/auth.navigator';
 import { AppRoute } from '../../navigation/app-routes';
 import { FormInput } from '../../components/form-input.component';
-import {
-  EyeIcon,
-  EyeOffIcon,
-} from '../../assets/icons';
-import {
-  SignInData,
-  SignInSchema,
-} from '../../data/sign-in.model';
+import { EyeIcon, EyeOffIcon } from '../../assets/icons';
+import { SignInData, SignInSchema } from '../../data/sign-in.model';
 
 export const SignInScreen = (props: SignInScreenProps): LayoutElement => {
 
