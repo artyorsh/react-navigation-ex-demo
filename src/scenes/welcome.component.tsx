@@ -1,10 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import {
-  Layout,
-  LayoutElement,
-  Text,
-} from '@ui-kitten/components';
+import { Layout, LayoutElement, Text } from '@ui-kitten/components';
 
 export const WelcomeScreen = (props): LayoutElement => (
   <Layout style={styles.container}>

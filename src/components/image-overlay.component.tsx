@@ -7,6 +7,7 @@ import {
   View,
   ViewStyle,
 } from 'react-native';
+
 interface ImageOverlayStyle extends ViewStyle {
   overlayColor?: string;
 }
@@ -23,10 +24,6 @@ const DEFAULT_OVERLAY_COLOR: string = 'rgba(0, 0, 0, 0.15)';
 
 export class ImageOverlay extends React.Component<ImageOverlayProps> {
 
-  private getOverlayColor = (source: string | undefined): string => {
-    return source || DEFAULT_OVERLAY_COLOR;
-  };
-
   public render(): React.ReactElement<ImageBackgroundProps> {
     const { style, children, ...restProps } = this.props;
     const { overlayColor: derivedOverlayColor, ...containerStyle } = StyleSheet.flatten(style);
@@ -42,6 +39,10 @@ export class ImageOverlay extends React.Component<ImageOverlayProps> {
       </ImageBackground>
     );
   }
+
+  private getOverlayColor = (source: string | undefined): string => {
+    return source || DEFAULT_OVERLAY_COLOR;
+  };
 }
 
 const styles = StyleSheet.create({
