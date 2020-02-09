@@ -10,7 +10,8 @@ type ProfileNavigatorParams = {
 }
 
 export interface ProfileScreenProps {
-  navigation: CompositeNavigationProp<ProfileTabNavigationProp,
+  navigation: CompositeNavigationProp<
+    ProfileTabNavigationProp,
     StackNavigationProp<ProfileNavigatorParams, AppRoute.PROFILE>>;
   route: RouteProp<ProfileNavigatorParams, AppRoute.PROFILE>;
 }

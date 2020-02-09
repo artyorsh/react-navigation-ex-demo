@@ -26,10 +26,12 @@ type HomeBottomTabsNavigatorParams = {
   [AppRoute.PROFILE]: undefined;
 }
 
-export type TodoTabNavigationProp = CompositeNavigationProp<BottomTabNavigationProp<HomeBottomTabsNavigatorParams, AppRoute.TODO>,
+export type TodoTabNavigationProp = CompositeNavigationProp<
+  BottomTabNavigationProp<HomeBottomTabsNavigatorParams, AppRoute.TODO>,
   DrawerNavigationProp<HomeDrawerNavigatorParams, AppRoute.HOME>>;
 
-export type ProfileTabNavigationProp = CompositeNavigationProp<BottomTabNavigationProp<HomeBottomTabsNavigatorParams, AppRoute.PROFILE>,
+export type ProfileTabNavigationProp = CompositeNavigationProp<
+  BottomTabNavigationProp<HomeBottomTabsNavigatorParams, AppRoute.PROFILE>,
   DrawerNavigationProp<HomeDrawerNavigatorParams, AppRoute.HOME>>;
 
 export interface AboutScreenProps {

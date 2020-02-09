@@ -22,7 +22,9 @@ export const HomeDrawer = (props: DrawerHomeScreenProps): DrawerElement => {
     const { options } = props.descriptors[route.key];
     return {
       routeName: route.name,
+      // @ts-ignore: all Drawer Screens strictly have string title
       title: options.title,
+      // @ts-ignore: all Drawer Screens strictly have UI Kitten Icon
       icon: options.drawerIcon,
     };
   };

@@ -32,13 +32,15 @@ export type TodoScreenProps = MaterialTopTabBarProps & {
 }
 
 export interface TodoInProgressScreenProps {
-  navigation: CompositeNavigationProp<TodoTabNavigationProp,
+  navigation: CompositeNavigationProp<
+    TodoTabNavigationProp & StackNavigationProp<TodoNavigatorParams, AppRoute.TODO_DETAILS>,
     MaterialTopTabNavigationProp<TodoTabsNavigatorParams, AppRoute.TODO_IN_PROGRESS>>;
   route: RouteProp<TodoTabsNavigatorParams, AppRoute.TODO_IN_PROGRESS>;
 }
 
 export interface TodoDoneScreenProps {
-  navigation: CompositeNavigationProp<TodoTabNavigationProp,
+  navigation: CompositeNavigationProp<
+    TodoTabNavigationProp & StackNavigationProp<TodoNavigatorParams, AppRoute.TODO_DETAILS>,
     MaterialTopTabNavigationProp<TodoTabsNavigatorParams, AppRoute.TODO_DONE>>;
   route: RouteProp<TodoTabsNavigatorParams, AppRoute.TODO_DONE>;
 }
@@ -52,14 +54,9 @@ const Stack = createStackNavigator<TodoNavigatorParams>();
 const TopTab = createMaterialTopTabNavigator<TodoTabsNavigatorParams>();
 
 // FIXME: Is it possible to track swipe progress?
+//
 // In this case, it's needed to synchronize tab-bar indicator in TodoScreen
-//
 // Currently I have set `swipeEnabled` to `false` just for saving navigation consistence
-//
-// Btw, it's not possible to use `@react-navigation/material-top-tabs
-// without `react-native-tab-view` even if you use custom `tabBarComponent`
-//
-// Anyway, it's possible to create top tab navigation with gesture support with UI Kitten `TabView`
 
 const TodoTabsNavigator = (): React.ReactElement => (
   // @ts-ignore: `tabBar` also contains a DrawerNavigationProp & BottomTabNavigationProp

@@ -25,6 +25,7 @@ export const HomeTabBar = (props: BottomHomeScreenProps): SafeAreaLayoutElement 
       <BottomNavigationTab
         key={route.key}
         title={options.title}
+        // @ts-ignore: all Tab Screens strictly have UI Kitten Icon
         icon={options.tabBarIcon}
       />
     );

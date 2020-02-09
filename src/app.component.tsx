@@ -1,5 +1,4 @@
 import React from 'react';
-import { YellowBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { light, mapping } from '@eva-design/eva';
@@ -28,9 +27,3 @@ export default (): React.ReactFragment => {
     </React.Fragment>
   );
 };
-
-// For some reason, starting from 0.61, react-native-gesture-handler throws this warning
-// https://github.com/facebook/react-native/issues/26226
-// YellowBox.ignoreWarnings([
-//   'RCTRootView cancelTouches',
-// ]);

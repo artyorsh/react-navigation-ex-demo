@@ -10,12 +10,12 @@ import {
 import { Toolbar, ToolbarMenu } from '../../components/toolbar.component';
 import { InfoIcon, LogoutIcon, MenuIcon } from '../../assets/icons';
 
-export const TodoTabBar = (props: TodoScreenProps): SafeAreaLayoutElement => {
+const menu: ToolbarMenu = [
+  { title: 'About', icon: InfoIcon },
+  { title: 'Log Out', icon: LogoutIcon },
+];
 
-  const menu: ToolbarMenu = [
-    { title: 'About', icon: InfoIcon },
-    { title: 'Log Out', icon: LogoutIcon },
-  ];
+export const TodoTabBar = (props: TodoScreenProps): SafeAreaLayoutElement => {
 
   const onMenuItemSelect = (index: number): void => {
     const { [index]: selectedItem } = menu;
@@ -41,6 +41,7 @@ export const TodoTabBar = (props: TodoScreenProps): SafeAreaLayoutElement => {
       <Tab
         key={route.key}
         title={options.title}
+        // @ts-ignore: all Tab Screens options strictly have UI Kitten Icon
         icon={options.tabBarIcon}
       />
     );
