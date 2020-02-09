@@ -8,7 +8,7 @@ import { ImageOverlay } from '../../components/image-overlay.component';
 import { ProgressBar } from '../../components/progress-bar.component';
 import { Todo } from '../../data/todo.model';
 
-export interface TodoDetailsRouteParams {
+export type TodoDetailsRouteParams = {
   todo: Todo;
 }
 

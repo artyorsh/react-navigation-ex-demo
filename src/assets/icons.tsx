@@ -45,10 +45,6 @@ export const HomeIcon = (style): IconElement => (
   <Icon {...style} name='home-outline'/>
 );
 
-export const DoneIcon = (style): IconElement => (
-  <Icon {...style} name='checkmark-outline'/>
-);
-
 export const DoneAllIcon = (style): IconElement => (
   <Icon {...style} name='done-all-outline'/>
 );
@@ -59,10 +55,6 @@ export const GridIcon = (style): IconElement => (
 
 export const SearchIcon = (style): IconElement => (
   <Icon {...style} name='search-outline'/>
-);
-
-export const PlusIcon = (style): IconElement => (
-  <Icon {...style} name='plus-outline'/>
 );
 
 
