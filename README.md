@@ -21,4 +21,4 @@ git checkout complete-examples
 [link:home]: https://github.com/artyorsh/react-navigation-ex-demo
 [link:react-navigation-ex]: https://github.com/react-navigation/react-navigation
 [link:ui-kitten]: https://github.com/akveo/react-native-ui-kitten
-[link:blog-post]: https://reactnavigation.org/blog/2019/11/04/using-react-navigation-5-with-ui-kitten.html
+[link:blog-post]: https://reactnavigation.org/blog/2019/11/04/using-react-navigation-5-with-ui-kitten
