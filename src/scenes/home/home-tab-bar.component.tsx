@@ -6,11 +6,7 @@ import {
   Divider,
 } from '@ui-kitten/components';
 import { BottomHomeScreenProps } from '../../navigation/home.navigator';
-import {
-  SafeAreaLayout,
-  SafeAreaLayoutElement,
-  SaveAreaInset,
-} from '../../components/safe-area-layout.component';
+import { SafeAreaLayout, SafeAreaLayoutElement, SaveAreaInset } from '../../components/safe-area-layout.component';
 
 export const HomeTabBar = (props: BottomHomeScreenProps): SafeAreaLayoutElement => {
 

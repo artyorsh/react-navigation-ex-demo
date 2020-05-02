@@ -49,10 +49,10 @@ export const TodoInProgressScreen = (props: TodoInProgressScreenProps): ListElem
     props.navigation.navigate(AppRoute.TODO_DETAILS, { todo });
   };
 
-  const renderTodo = ({ item }: ListRenderItemInfo<Todo>): ListItemElement => (
+  const renderTodo = ({ item, index }: ListRenderItemInfo<Todo>): ListItemElement => (
     <ListItem
       style={styles.item}
-      onPress={navigateTodoDetails}>
+      onPress={() => navigateTodoDetails(index)}>
       <Text category='s1'>
         {item.title}
       </Text>
@@ -75,7 +75,7 @@ export const TodoInProgressScreen = (props: TodoInProgressScreenProps): ListElem
         style={styles.filterInput}
         placeholder='Search'
         value={query}
-        icon={SearchIcon}
+        accessoryLeft={SearchIcon}
         onChangeText={onChangeQuery}
       />
       <List
