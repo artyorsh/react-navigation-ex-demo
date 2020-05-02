@@ -1,19 +1,11 @@
 import React from 'react';
-import { Divider, Tab, TabBar, TabElement } from '@ui-kitten/components';
+import { Divider, Tab, TabBar, TabElement, MenuItem } from '@ui-kitten/components';
 import { TodoScreenProps } from '../../navigation/todo.navigator';
 import { AppRoute } from '../../navigation/app-routes';
-import {
-  SafeAreaLayout,
-  SafeAreaLayoutElement,
-  SaveAreaInset,
-} from '../../components/safe-area-layout.component';
-import { Toolbar, ToolbarMenu } from '../../components/toolbar.component';
+import { SafeAreaLayout, SafeAreaLayoutElement, SaveAreaInset } from '../../components/safe-area-layout.component';
+import { Toolbar } from '../../components/toolbar.component';
 import { InfoIcon, LogoutIcon, MenuIcon } from '../../assets/icons';
 
-const menu: ToolbarMenu = [
-  { title: 'About', icon: InfoIcon },
-  { title: 'Log Out', icon: LogoutIcon },
-];
 
 export const TodoTabBar = (props: TodoScreenProps): SafeAreaLayoutElement => {
 
@@ -47,12 +39,25 @@ export const TodoTabBar = (props: TodoScreenProps): SafeAreaLayoutElement => {
     );
   };
 
+  const renderToolbarMenu = (): React.ReactElement => (
+    <React.Fragment>
+      <MenuItem
+        title='About'
+        accessoryLeft={InfoIcon}
+      />
+      <MenuItem
+        title='Log Out'
+        accessoryLeft={LogoutIcon}
+      />
+    </React.Fragment>
+  );
+
   return (
     <SafeAreaLayout insets={SaveAreaInset.TOP}>
       <Toolbar
         title='React Navigation Ex 🐱'
         onMenuItemSelect={onMenuItemSelect}
-        menu={menu}
+        menu={renderToolbarMenu}
         backIcon={MenuIcon}
         onBackPress={props.navigation.toggleDrawer}
       />
@@ -61,7 +66,7 @@ export const TodoTabBar = (props: TodoScreenProps): SafeAreaLayoutElement => {
         onSelect={onTabSelect}>
         {props.state.routes.map(createNavigationTabForRoute)}
       </TabBar>
-      <Divider/>
+      <Divider />
     </SafeAreaLayout>
   );
 };
